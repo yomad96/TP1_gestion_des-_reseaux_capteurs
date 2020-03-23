@@ -6,6 +6,7 @@
         android:name="android.permission.FLASHLIGHT"
         android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
         android:protectionLevel="normal" />
+    <uses-permission android:name="android.hardware.sensor.proximity"/>
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.hardware.SensorListener" />
@@ -17,15 +18,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Main2Activity_exo4" />
-<!--        <activity android:name=".MainActivity" />-->
+<!--        <activity android:name=".Main2Activity_exo6"></activity>-->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Main2Activity_exo4" /><!-- <activity android:name=".MainActivity" /> -->
         <activity android:name=".Main2Activity_exo2" />
         <activity android:name=".Main2Activity_exo3" />
-        <activity android:name=".Main2Activity_exo5">
+        <activity android:name=".Main2Activity_exo5" />
+        <activity android:name=".Main2Activity_exo6">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
