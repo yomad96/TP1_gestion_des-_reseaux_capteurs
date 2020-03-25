@@ -8,18 +8,21 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 public class Main2Activity_exo6 extends AppCompatActivity implements SensorEventListener {
 
     float p;
     SensorManager sensorManager;
     Sensor proximity;
-
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2_exo6);
+
+        textView = (TextView) findViewById(R.id.textView);
 
         // Instancier le SensorManager
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -50,8 +53,10 @@ public class Main2Activity_exo6 extends AppCompatActivity implements SensorEvent
 
             if (p < 1){
                 Log.d("distance du téléphone","le téléphone est près");
+                textView.setText("Distance du téléphone : trop près");
             }else{
                 Log.d("distance du téléphone","le téléphone est loin");
+                textView.setText("Distance du téléphone : trop loin");
             }
         }
     }

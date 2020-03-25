@@ -9,13 +9,20 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class Main2Activity_exo4 extends AppCompatActivity implements SensorEventListener {
+
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2_exo4);
+
+        textView = (TextView) findViewById(R.id.textView);
     }
 
     //Exercice 4
@@ -37,18 +44,22 @@ public class Main2Activity_exo4 extends AppCompatActivity implements SensorEvent
 
             if (x<0){
                 Log.d("direction","droite");
+                textView.setText("direction: droite");
             }
 
             if (x>0){
                 Log.d("direction","gauche");
+                textView.setText("direction: gauche");
             }
 
             if (y<0){
                 Log.d("direction","bas");
+                textView.setText("direction: bas");
             }
 
             if (y>0){
                 Log.d("direction","haut");
+                textView.setText("direction: haut");
             }
         }
     }
