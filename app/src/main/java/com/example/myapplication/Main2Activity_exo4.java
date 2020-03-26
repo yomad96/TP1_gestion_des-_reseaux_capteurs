@@ -16,6 +16,7 @@ import org.w3c.dom.Text;
 public class Main2Activity_exo4 extends AppCompatActivity implements SensorEventListener {
 
     private TextView textView;
+    private TextView textView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class Main2Activity_exo4 extends AppCompatActivity implements SensorEvent
         setContentView(R.layout.activity_main2_exo4);
 
         textView = (TextView) findViewById(R.id.textView);
+        textView2 = (TextView) findViewById(R.id.textView2);
     }
 
     //Exercice 4
@@ -44,12 +46,12 @@ public class Main2Activity_exo4 extends AppCompatActivity implements SensorEvent
 
             if (x<0){
                 Log.d("direction","droite");
-                textView.setText("direction: droite");
+                textView2.setText("direction: droite");
             }
 
             if (x>0){
                 Log.d("direction","gauche");
-                textView.setText("direction: gauche");
+                textView2.setText("direction: gauche");
             }
 
             if (y<0){
